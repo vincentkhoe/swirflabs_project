@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwirfLabs Employee</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="card">
+  <h1>EMPLOYEE DATA</h1>
+  <div class="sub">SWIRFLABS</div>
+
+  <form id="employeeForm" novalidate>
+    <div class="form-grid">
+
+      <div class="input-field">
+        <label>Full name</label>
+        <input type="text" id="name" placeholder="e.g. Vincent Khoe" autocomplete="off">
+        <div class="hint">Unique with ID</div>
+      </div>
+      <div class="input-field">
+        <label>Identification number</label>
+        <input type="text" id="idNumber" placeholder="e.g. EMP-001">
+        <div class="hint">Unique key</div>
+      </div>
+
+      <div class="input-field">
+        <label>Date of birth</label>
+        <input type="date" id="dob" required>
+      </div>
+      <div class="input-field">
+        <label>Occupation</label>
+        <select id="occupation">
+          <option value="" disabled selected>– select –</option>
+          <option value="Unemployed">Unemployed</option>
+          <option value="Programmer">Programmer</option>
+          <option value="Designer">Designer</option>
+          <option value="Architect">Architect</option>
+          <option value="Artist">Artist</option>
+        </select>
+      </div>
+
+      <div class="input-field span-2">
+        <label>Address</label>
+        <input type="text" id="address" placeholder="Street, city, etc.">
+      </div>
+
+      <div class="input-field span-2">
+        <label>Place of birth</label>
+        <input type="text" id="birthPlace" placeholder="City / town">
+      </div>
+
+      <div class="span-4 action-row">
+        <div class="message-area" id="liveMessage"></div>
+        <button type="submit" class="submit-btn">SUBMIT</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="table-wrapper">
+    <table id="employeeTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>Occupation</th>
+        </tr>
+      </thead>
+
+      <tbody id="tableBody">
+
+      </tbody>
+
+    </table>
+  </div>
+  <footer>Name and ID must be unique | Mandatory: Name, ID, Occupation, Date of Birth</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
